@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SG KIDS SCHOOL</title>
+    <title>SG SCHOOL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,17 +18,18 @@
 
     <header class="navbar">
         <div class="nav-brand">
-            <h1>SG KIDS</h1>
-            <span class="sub-brand">THE Light of Lamp</span>
+            <a class="navbar-brand" href="#home-section">
+                <img src="https://res.cloudinary.com/dhni9yesw/image/upload/v1784104819/Screenshot_2026-07-15_140548_ybkqvn.png" alt="SG English Medium High School Logo" class="nav-logo">
+            </a>
         </div>
 
         <nav class="nav-menu" id="navMenu">
 
             <a href="#home" class="nav-item active">Home</a>
             <a href="#about" class="nav-item">About Us</a>
-            <a href="#parent info" class="nav-item">Parent Info</a>
-            <a href="#curriculum" class="nav-item">Curriculum</a>
-            <a href="#academics" class="nav-item">Academics</a>
+            <a href="#services" class="nav-item">Parent Info</a>
+            <a href="#services" class="nav-item">Curriculum</a>
+            <a href="#features" class="nav-item">Academics</a>
 
             <div class="nav-actions-mobile">
                 <!--  <a href="#" class="btn-secondary">Help Me Choose</a> -->
@@ -52,19 +53,19 @@
     <main class="hero-container">
         <div class="hero-content">
             <div class="hero-text-card">
-                <h2 class="hero-title">SG E.M High School <br>
+                <h2 class="hero-title">SG E.M. High School <br>
                     Recognised By : Govt. of AP</h2>
 
                 <form class="search-form" id="schoolSearchForm">
                     <div class="input-group">
                     </div>
                 </form>
-
-                <p class="hero-description">Education is the key to unlocking the world, a passport to freedom.
-                    Let us remember: One book,
-                    One pen, One child,
-                    can change the world.
-                </p>
+                <div class="hero-programs-grid">
+                    <a href="#" class="program-link">Day Care</a>
+                    <a href="#" class="program-link">Play Group</a>
+                    <a href="#" class="program-link">Nursery</a>
+                    <a href="#" class="program-link">LKG to 10th Class</a>
+                </div>
                 <a href="https://wa.me/919182193399" class="btn-book" target="_blank" rel="noopener noreferrer">Contact Us</a>
             </div>
         </div>
@@ -78,6 +79,54 @@
             </div>
         </section>
     </main>
+    <section class="features-section" id="features">
+        <div class="features-container">
+
+            <h2 class="section-title">Salient Features of our school</h2>
+            <ul class="features-list">
+                <li>Healthy Atmosphere with good Sanitization</li>
+                <li>Qualified, Experienced & Creative Staff</li>
+                <li>Playway classes wih modern Equipments</li>
+                <li>CCTV Surveillance</li>
+                <li>Air Conditioned & Digital Smart classes</li>
+                <li>Provide Quality Education</li>
+                <li>Personal Care on slow learners</li>
+                <li>Limited strength in each class</li>
+                <li>English Learning atmosphere</li>
+                <li>Regular contact with the parents for the progress</li>
+                <li>Mineral water facility</li>
+                <li>Children Activities are directly sent through WhatsApp (photos & videos)</li>
+                <li>Sports & Games</li>
+                <li>Regular Health check-up's</li>
+                <li>Pre-planned academic programs for the children</li>
+            </ul>
+
+            <h2 class="section-title">Extra Curricular Activities</h2>
+            <ul class="extra-curricular-list">
+                <li>Classical Dance</li>
+                <li>Spoken English</li>
+                <li>Western Dance</li>
+                <li>Abacus</li>
+                <li>Karate</li>
+                <li>Hindi classes</li>
+                <li>Music</li>
+                <li>Computers</li>
+                <li>Chess</li>
+                <li>LKG to 10th class all subject tuitions available</li>
+            </ul>
+
+            <div class="transport-container">
+                <div class="transport-text">
+                    <h3>Transport facility available</h3>
+                    <p>Safe, comfortable, and reliable transportation across various routes to ensure your child reaches school and home securely.</p>
+                </div>
+                <div class="transport-image">
+                    <img src="https://res.cloudinary.com/dhni9yesw/image/upload/v1784112916/Screenshot_2026-07-15_162456_zgv8wa.png" alt="School Bus Facility">
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section class="services-section" id="services">
         <h2 class="section-subtitle">Parent Info & Curriculum</h2>
         <p class="section-title">We believe that education is the key to success...</p>
@@ -283,25 +332,15 @@
             </div>
             <div class="appt-panel">
                 <div class="appt-form">
-                    <form onsubmit="sendToWhatsApp(event)">
-
-                        <div class="form-field">
-                            <label>Full name</label>
-                            <input type="text" id="appt-name" placeholder="e.g. Priya Reddy" required>
-                        </div>
-
-                        <div class="form-field">
-                            <label>Phone number</label>
-                            <input type="text" id="appt-phone" placeholder="+91 90000 00000" required>
-                        </div>
+                    <form class="booking-form-container" onsubmit="sendToWhatsApp(event)">
 
                         <input type="text" id="fullName" placeholder="e.g. Priya Reddy">
-<input type="tel" id="phoneNumber" placeholder="+91 90000 00000">
-<input type="date" id="visitDate">
-<input type="time" id="visitTime">
-<button id="confirmBtn" type="button" onclick="sendToWhatsApp()">Confirm Booking</button>
+                        <input type="tel" id="phoneNumber" placeholder="+91 90000 00000">
+                        <input type="date" id="visitDate">
+                        <input type="time" id="visitTime">
+                        <button id="confirmBtn" type="button" onclick="sendToWhatsApp()">Confirm Booking</button>
 
-                       
+                    </form>
 
                     <div class="appt-confirm" id="appt-confirm">✅ <span>Visit request received — our team will call to confirm shortly.</span></div>
                 </div>
@@ -334,7 +373,7 @@
 
                 <div class="info-box">
                     <h3>Hours</h3>
-                    <p>Mon - Sun: 8:00 AM - 9:00 PM</p>
+                    <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
                 </div>
 
                 <a href="https://wa.me/919182193399" class="btn-card card-redirect" target="_blank" rel="noopener noreferrer">Contact Us</a>
@@ -350,8 +389,8 @@
         <div class="footer-container">
 
             <div class="footer-column brand-info">
-                <h3>SG KIDS</h3>
-                <span class="sub-brand">The light of life</span>
+                <h3>SG E.M High School</h3>
+                <span class="sub-brand">Come to learn create a new world</span>
                 <p>Education is not just about going to school and getting a degree. It’s about widening your knowledge and absorbing the truth about life.</p>
             </div>
 
@@ -370,7 +409,7 @@
                 <p>📍 Plot no 40, Visalandra Colony,</p>
                 <p>2nd Street, Sundaraiah Nagar,</p>
                 <p>Vijayawada, AP 520015</p>
-                <p>📞 Phone: +91 98765 43210</p>
+                <p>📞 Phone: +91 9182193399</p>
             </div>
 
             <div class="footer-column">
@@ -402,7 +441,7 @@
             <button onclick="sendAIQuery()">Send</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="sheet.js"></script>
 </body>
 
 </html>

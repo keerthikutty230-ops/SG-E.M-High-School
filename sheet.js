@@ -93,7 +93,9 @@ async function sendAIQuery() {
         curriculum: "Our school offers academic excellence recognized by the Govt. of AP, focusing on structured syllabus, critical thinking, holistic development, and cultural activities.",
         academics: "We ensure academic excellence balancing conceptual text learning with extracurricular growth.",
         hi: "Hello! I am the SG KIDS AI assistant. How can I help you today?",
-        hello: "Hi there! Feel free to ask me about our school timings, location, or curriculum!"
+        hello: "Hi there! Feel free to ask me about our school timings, location, or curriculum!",
+        thanks: "You're welcome! Thank you for asking. Let me know if you have any more questions about SG E.M High School.",
+        ok: "Great! Let me know if you need help with anything else."
     };
 
     // 4. Match Query
@@ -139,7 +141,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
         `*Time:* ${encodeURIComponent(timeValue)}`;
 
     // 5. Your verified business WhatsApp number
-    const businessNumber = "916305263626";
+    const businessNumber = "919182193399";
 
     // 6. Reveal the confirmation element success message block
     const confirmBox = document.getElementById('appt-confirm');
@@ -150,33 +152,34 @@ document.querySelector('form').addEventListener('submit', function(event) {
     // 7. Fire up the WhatsApp connection tab cleanly
     window.open(`https://api.whatsapp.com/send?phone=${businessNumber}&text=${message}`, '_blank');
 });
+
 function sendToWhatsApp() {
-  // 1. Get the values from the form
-  const name = document.getElementById("fullName").value;
-  const phone = document.getElementById("phoneNumber").value;
-  const date = document.getElementById("visitDate").value;
-  const time = document.getElementById("visitTime").value;
+    // 1. Get the values from the form
+    const name = document.getElementById("fullName").value;
+    const phone = document.getElementById("phoneNumber").value;
+    const date = document.getElementById("visitDate").value;
+    const time = document.getElementById("visitTime").value;
 
-  // Optional: Add basic validation to ensure fields aren't empty
-  if(!name || !phone) {
-    alert("Please fill in your name and phone number.");
-    return;
-  }
+    // Optional: Add basic validation to ensure fields aren't empty
+    if (!name || !phone) {
+        alert("Please fill in your name and phone number.");
+        return;
+    }
 
-  // 2. Format the message
-  // %0A represents a line break in URL encoding
-  const message = `Hello, I would like to book a visit:%0A%0A`
-    + `*Name:* ${name}%0A`
-    + `*Phone:* ${phone}%0A`
-    + `*Date:* ${date}%0A`
-    + `*Time:* ${time}`;
+    // 2. Format the message
+    // %0A represents a line break in URL encoding
+    const message = `Hello, I would like to book a visit:%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Date:* ${date}%0A` +
+        `*Time:* ${time}`;
 
-  // 3. The WhatsApp number receiving the message (include country code, no + or spaces)
-  const targetNumber = "919182193399"; 
+    // 3. The WhatsApp number receiving the message (include country code, no + or spaces)
+    const targetNumber = "917799132222";
 
-  // 4. Create the final URL
-  const whatsappURL = `https://wa.me/${targetNumber}?text=${message}`;
+    // 4. Create the final URL
+    const whatsappURL = `https://wa.me/${targetNumber}?text=${message}`;
 
-  // 5. Open WhatsApp in a new tab
-  window.open(whatsappURL, "_blank");
+    // 5. Open WhatsApp in a new tab
+    window.open(whatsappURL, "_blank");
 }
