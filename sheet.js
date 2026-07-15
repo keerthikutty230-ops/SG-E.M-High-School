@@ -150,3 +150,33 @@ document.querySelector('form').addEventListener('submit', function(event) {
     // 7. Fire up the WhatsApp connection tab cleanly
     window.open(`https://api.whatsapp.com/send?phone=${businessNumber}&text=${message}`, '_blank');
 });
+function sendToWhatsApp() {
+  // 1. Get the values from the form
+  const name = document.getElementById("fullName").value;
+  const phone = document.getElementById("phoneNumber").value;
+  const date = document.getElementById("visitDate").value;
+  const time = document.getElementById("visitTime").value;
+
+  // Optional: Add basic validation to ensure fields aren't empty
+  if(!name || !phone) {
+    alert("Please fill in your name and phone number.");
+    return;
+  }
+
+  // 2. Format the message
+  // %0A represents a line break in URL encoding
+  const message = `Hello, I would like to book a visit:%0A%0A`
+    + `*Name:* ${name}%0A`
+    + `*Phone:* ${phone}%0A`
+    + `*Date:* ${date}%0A`
+    + `*Time:* ${time}`;
+
+  // 3. The WhatsApp number receiving the message (include country code, no + or spaces)
+  const targetNumber = "919182193399"; 
+
+  // 4. Create the final URL
+  const whatsappURL = `https://wa.me/${targetNumber}?text=${message}`;
+
+  // 5. Open WhatsApp in a new tab
+  window.open(whatsappURL, "_blank");
+}
