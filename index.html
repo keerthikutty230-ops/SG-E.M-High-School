@@ -295,29 +295,13 @@
                             <input type="text" id="appt-phone" placeholder="+91 90000 00000" required>
                         </div>
 
-                        <div class="form-field">
-                            <label>Enquiry type</label>
-                            <select id="appt-property" required>
-                                <option value="Admission">Admission</option>
-                            </select>
-                        </div>
+                        <input type="text" id="fullName" placeholder="e.g. Priya Reddy">
+<input type="tel" id="phoneNumber" placeholder="+91 90000 00000">
+<input type="date" id="visitDate">
+<input type="time" id="visitTime">
+<button id="confirmBtn" type="button" onclick="sendToWhatsApp()">Confirm Booking</button>
 
-                        <div class="form-row">
-                            <div class="form-field">
-                                <label>Visit date</label>
-                                <input type="date" id="appt-date" required>
-                            </div>
-                            <div class="form-field">
-                                <label>Preferred time</label>
-                                <input type="time" id="appt-time" required>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="hero-cta" style="width:100%; justify-content:center; box-shadow:none; color:#ffffff;">
-                            Confirm Booking
-                        </button>
-
-                    </form>
+                       
 
                     <div class="appt-confirm" id="appt-confirm">✅ <span>Visit request received — our team will call to confirm shortly.</span></div>
                 </div>
